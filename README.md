@@ -63,7 +63,7 @@ Then run the following commands:
 Done!
 
 
-Configure tunneling for:
+Configure tunneling on your laptop for:
 
-port 9092 for Kafka
-port 9021 for Control Center
+- port 9092 for Kafka
+- port 9021 for Control Center
