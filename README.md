@@ -2,6 +2,8 @@
 Quick setup:
 ------------
 
+Create a compute engine with at least 15GB of RAM and 15 GB of disk.  
+Then run the following commands:
 
 
 1. install git
