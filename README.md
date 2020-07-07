@@ -6,7 +6,7 @@ Quick setup:
 
 1. install git
 
-	sudo apt install git
+        sudo apt install git
 
 
 2. install Docker
