@@ -26,44 +26,41 @@ Then run the following commands:
 
 3. install docker-compose   
    
-   	sudo curl -L "https://github.com/docker/compose/releases/download/1.26.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+        sudo curl -L "https://github.com/docker/compose/releases/download/1.26.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
    	
-   	sudo chmod +x /usr/local/bin/docker-compose
+        sudo chmod +x /usr/local/bin/docker-compose
    	
    
 4. clone git GCP Pilot project from GitHub
 
-	git clone https://github.com/jplaroche2000/gcp_pilot.git
+        git clone https://github.com/jplaroche2000/gcp_pilot.git
 
-
+        Note:
+        Product ODS table def file needs to be built with the Striim image,
+	
 5. create directory where to put trail files
 
-	sudo mkdir /export/trailfiles
+        sudo mkdir /export/trailfiles
 	
-	sudo chmod a+rwx /export/trailfiles
+        sudo chmod a+rwx /export/trailfiles
 	
 	
-???????
-
-	Product ODS table def file needs to be built with Striim image
-	
-
 5. Run Striim/Confluent on Docker
 
-	cd ./gcp_pilot/docker
+        cd ./gcp_pilot/docker
 	
-	sudo docker-compose -f docker-compose-striim-confluent.yml build
+        sudo docker-compose -f docker-compose-striim-confluent.yml build
 	
-	sudo docker swarm init
-	
-	sudo docker-compose -f docker-compose-striim-confluent.yml up -d
+        sudo docker swarm init
 
-	sudo docker container ls
+        sudo docker-compose -f docker-compose-striim-confluent.yml up -d
+
+        sudo docker container ls
 	
-	sudo docker container logs docker_striim_1 -f &
+        sudo docker container logs docker_striim_1 -f &
 	
 
---- Done!
+Done!
 
 
 Configure tunneling for:
